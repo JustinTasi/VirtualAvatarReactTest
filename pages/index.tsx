@@ -10,23 +10,22 @@ export default function Home() {
       <div className={styles.background}>
         <article className={styles.container}>
           <div className={styles.header}>
-            <div className={styles.title}>
+            <div className={styles.rawDiv}>
               <Image src="/images/Logo.png" alt="MediMate Logo" width={200} height={60} className={styles.logo}/>
-              <span className={styles.brandName}>
-                MediMate智能聊天夥伴
-              </span>
+              <span className={styles.brandName}>MediMate智能聊天夥伴</span>
             </div>
+            <span className={styles.userName}>{userName}您好，歡迎使用智能聊天小夥伴 !</span>
           </div>
-          <div id="voiceOnput">
-            {userName}您好，歡迎使用智能聊天小夥伴 !
-          </div>
+
           <button className={styles.voiceButton}>
             <Image src="/images/microphone.png" alt="Microphone" width={100} height={60} className={styles.voiceButtonImage}/>
           </button>
+
           <div className={styles.actions}>
-            <div className={styles.voiceInput}>請開始說話</div>
+            <p className={styles.voiceInput}>請開始說話</p>
             <button className={styles.stopButton}>結束錄音</button>
           </div>
+
         </article>
       </div>
     </Layout>
